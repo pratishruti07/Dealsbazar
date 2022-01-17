@@ -23,7 +23,9 @@ export class AdminLoginComponent implements OnInit {
     console.log(this.credential);
     console.log("credential : "+JSON.stringify(this.credential));
     resp.subscribe((cred:any)=>this.msg=cred);
+    if(this.credential!=null)
     this.router.navigate(["/admin-uses"])
+     
   }
 
 }
